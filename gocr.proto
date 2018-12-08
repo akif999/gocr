@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "github.com/akif999/gocr";
+package gocr;
+
+message GetRequest {
+  string id = 1;
+}
+
+message GetResponse {
+  string id = 1;
+}
+
+service Gocr {
+  rpc Get(GetRequest) returns (GetResponse) {}
+}
